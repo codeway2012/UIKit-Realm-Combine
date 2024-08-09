@@ -5,11 +5,11 @@
 - Realm과 Combine 연결해서 활용하는 샘플용 코드
 
 ### Target별 중점 코드
-1. @Published
-2. PassthroughSubject
-3. CurrentValueSubject
-4. changesetPublisher
-5. collectionPublisher
+RealmTest1. @Published
+RealmTest2. PassthroughSubject
+RealmTest3. CurrentValueSubject
+RealmTest4. changesetPublisher
+RealmTest5. collectionPublisher
 
 
 ### 사진
