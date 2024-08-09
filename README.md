@@ -4,7 +4,7 @@
 - UIkit의 MVVM 패턴 사용
 - Realm과 Combine 연결해서 활용하는 샘플용 코드
 
-### Traget 
+### Target별 중점 코드
 1. @Published
 2. PassthroughSubject
 3. CurrentValueSubject
