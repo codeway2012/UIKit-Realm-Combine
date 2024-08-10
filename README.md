@@ -5,13 +5,13 @@
 - Realm과 Combine 연결해서 활용하는 샘플용 코드
 
 ## Target별 중점 코드
-1. RealmTest - @Published, Observe
-2. RealmTest2 - PassthroughSubject, Observe
-3. RealmTest3 - CurrentValueSubject, Observe
-4. RealmTest4 - PassthroughSubject, changesetPublisher
-5. RealmTest5 - PassthroughSubject, collectionPublisher
+1. RealmTest - `@Published`, `Observe`
+2. RealmTest2 - `PassthroughSubject`, `Observe`
+3. RealmTest3 - `CurrentValueSubject`, `Observe`
+4. RealmTest4 - `PassthroughSubject`, `changesetPublisher`
+5. RealmTest5 - `PassthroughSubject`, `collectionPublisher`
 
-(objectPublisher는 아직)
+(`objectPublisher`는 아직)
 
 
 ## 사진
@@ -24,23 +24,23 @@
 
 ## 문법
 
-### 1. 데이터 상태 유지 변수 : @Published vs Results<T>
+### 1. 데이터 상태 유지 변수 : `@Published` vs `Results<T>`
 
-- @Published
+- `@Published`
   - 장점 :
     - 간단한 데이터 흐름
   - 단점 :
     - 세부 데이터 변경 감지 어려움 : 배열이나 객체의 전체에 대한 변경을 감지. 세부 항목에 대한 개별 감지는 어려움
   
-- Results<T>
+- `Results<T>`
   - 장점 :
     - 세부 데이터 변경 감지 가능 : changesetPublisher와 collectionPublisher의 keyPath 옵션을 통해 데이터의 세부 변경 사항을 추적 가능
   - 단점 :
     - 데이터 흐름이 좀 더 복잡
 
 
-### 2. 데이터 변경 감지 : observe vs changesetPublisher
+### 2. 데이터 변경 감지 : `observe` vs `changesetPublisher`
 
-- observe : 콜백 방식
-- changesetPublisher : Combine Publisher 방식
+- `observe` : 콜백 방식
+- `changesetPublisher` : Combine Publisher 방식
 
