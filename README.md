@@ -11,7 +11,7 @@
 4. RealmTest4 - PassthroughSubject, changesetPublisher
 5. RealmTest5 - PassthroughSubject, collectionPublisher
 
-objectPublisher
+(objectPublisher는 아직)
 
 
 ## 사진
@@ -34,9 +34,9 @@ objectPublisher
   
 - Results<T>
   - 장점 :
-    - 세부 데이터 변경 감지 가능 : changesetPublisher와 collectionPublisher의 keyPath 옵션을 통해 데이터의 세부 변경 사항을 추적할 수 있습니다.
+    - 세부 데이터 변경 감지 가능 : changesetPublisher와 collectionPublisher의 keyPath 옵션을 통해 데이터의 세부 변경 사항을 추적 가능
   - 단점 :
-    - 데이터 흐름이 좀더 복잡
+    - 데이터 흐름이 좀 더 복잡
 
 
 ### 2. 데이터 변경 감지 : observe vs changesetPublisher
