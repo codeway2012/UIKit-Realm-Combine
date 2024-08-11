@@ -53,3 +53,4 @@
 - `CurrentValueSubject`
   - `let todoItemsSubject: CurrentValueSubject<Results<TodoItem>, Never>`
   - 직접 데이터 상태 유지
+  - `viewModel.todoItemsSubject.value.count` 데이터에 접근하려면 .value로 한단계 더 거쳐서 들어가야함
