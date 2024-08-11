@@ -48,7 +48,7 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     private func setupBindings() {
         // ViewModel의 todoItems가 변경될 때 UITableView를 업데이트합니다.
-        viewModel.todoItemsPublisher
+        viewModel.todoItemsSubject
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 print("tableView - reloadData")

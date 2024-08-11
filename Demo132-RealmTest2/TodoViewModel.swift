@@ -19,12 +19,7 @@ class TodoViewModel: ObservableObject {
     
     // Combine Subject
     // PassthroughSubject : 데이터를 유지하지 않음, send로 값이 들어올때만 방출
-    // todoItemsPublisher : 캡슐화. todoItemsSubject 데이터 변경 제어
-    private let todoItemsSubject = PassthroughSubject<[TodoItem], Never>()
-    var todoItemsPublisher: AnyPublisher<[TodoItem], Never> {
-        todoItemsSubject.eraseToAnyPublisher()
-    }
-    
+    let todoItemsSubject = PassthroughSubject<[TodoItem], Never>()
     
     init() {
         // realm 초기화
