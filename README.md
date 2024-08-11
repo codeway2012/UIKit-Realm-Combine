@@ -5,12 +5,13 @@
 - Realm과 Combine 연결해서 활용하는 샘플용 코드
 
 ## Target별 중점 코드
-1. RealmTest - `@Published`, `Observe`
-2. RealmTest2 - `PassthroughSubject`, `Observe`
-3. RealmTest3 - `CurrentValueSubject`, `Observe`
+1. RealmTest - `@Published`, `Observe`, `NotificationToken`
+2. RealmTest2 - `Results`, `PassthroughSubject`, `Observe`, `NotificationToken`
+3. RealmTest3 - `CurrentValueSubject`, `Observe`, `NotificationToken`
 4. RealmTest4 - `PassthroughSubject`, `changesetPublisher`
 5. RealmTest5 - `PassthroughSubject`, `collectionPublisher`
 
+(`1. RealmTest이 무난해 보임, 필요시 나중에 다른 걸로 코드 변경 가능할듯`)
 (`objectPublisher`는 아직)
 
 
@@ -44,3 +45,9 @@
 - `observe` : 콜백 방식
 - `changesetPublisher` : Combine Publisher 방식
 
+
+### 3. 방출 : PassthroughSubject vs CurrentValueSubject
+- `PassthroughSubject`
+  - `let todoItemsSubject = PassthroughSubject<[TodoItem], Never>()`, `var todoItems: Results<TodoItem>`
+- `CurrentValueSubject`
+  - `let todoItemsSubject: CurrentValueSubject<Results<TodoItem>, Never>`
