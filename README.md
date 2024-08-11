@@ -49,5 +49,7 @@
 ### 3. 방출 : PassthroughSubject vs CurrentValueSubject
 - `PassthroughSubject`
   - `let todoItemsSubject = PassthroughSubject<[TodoItem], Never>()`, `var todoItems: Results<TodoItem>`
+  - 별도의 데이터 상태 유지 변수가 필요
 - `CurrentValueSubject`
   - `let todoItemsSubject: CurrentValueSubject<Results<TodoItem>, Never>`
+  - 직접 데이터 상태 유지
